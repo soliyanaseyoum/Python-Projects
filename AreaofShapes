@@ -1,0 +1,46 @@
+def rectangle(length,width):
+    return length*width
+
+
+def triangle(base,height):
+    return 0.5*base*height
+
+def circle(radius):
+    return 3.14*radius*radius
+
+
+print('Menu of shapes: 1. Square','2. Rectangle', '3. Triangle', '4. Circle', sep='\n');
+shape = int(input('Please enter the number that corresponds with the shape in order to calculate area (ex: For  Square, input  1): '))
+
+
+if(shape == 1):
+   
+    side = int(input('Enter value of the side of the square (value must be greater than 0): '))
+     
+    if(side > 0):
+        print(square(side))
+    else:
+         print('Invalid value')
+
+elif(shape == 2):
+    length = int(input('Enter the length of rectangle (value must be greater than 0): '))
+    width = int(input('Enter the width of rectangle (value must be greater than 0) : '))
+    if(length > 0 and width > 0):
+        print(rectangle(length,width))
+    else:
+        print('Invalid value')
+elif(shape == 3):
+    base = int(input('Enter base of triangle (value must be greater than 0):'))
+    height = int(input('Enter height of triangle (value must be greater than 0): '))
+    if(base > 0 and height > 0):
+        print(triangle(base,height))
+    else:
+        print('Invalid value')
+elif(shape == 4):
+    radius = int(input('Enter radius of circle (value must be greater than 0) : '))
+    if(radius > 0):
+        print(circle(radius))
+    else:
+        print('Invalid value')
+else:
+    print('Invalid')
