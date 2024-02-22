@@ -1,0 +1,20 @@
+#Binary GCD 
+def gcd(p,q):
+    if q==0:
+        return p
+    elif p==0:
+        return q
+    elif (p%2==0) and (q%2==0):
+        return 2 * gcd(p // 2, q // 2)
+    elif (p%2==0) and (q%2!=0):
+        return gcd(p // 2, q)
+    elif (p % 2 != 0) and (q % 2 == 0):
+        return gcd(p, q // 2)
+    else:
+        if p>=q:
+            return gcd((p-q)//2,q)
+        else:
+            return gcd(p, (q - p) // 2)
+n1 = int(input("Enter the first integer: "))
+n2 = int(input("Enter the second integer: "))
+print("The greatest common denominator of both integers is:",gcd(n1,n2))
