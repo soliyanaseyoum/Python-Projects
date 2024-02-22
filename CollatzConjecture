@@ -1,0 +1,19 @@
+def hailstone(x):
+    if x % 2 == 0:
+        result = x // 2
+    else:
+        result = 3 * x + 1
+    print(result, end=' ')
+    return result
+
+
+def main():
+    n = input("Give me a number: ")
+    while n != 1:
+        n = hailstone(int(n))
+    print()
+
+
+main()
+
+
